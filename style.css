@@ -1,0 +1,35 @@
+body{
+   
+    margin-top: 50px;
+}
+
+fieldset
+{
+    width: 500px;
+}
+
+/* .output
+{
+    margin-top: 50px;
+    width: 800px;
+    border: 2px solid green;
+    padding-left: 20px;
+} */
+
+span{
+    font-size: 20px;
+}
+
+table,th,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding:10px;
+    width: auto;
+    margin-top: 30px;
+
+}
+
+#td1,#td2,#td3,#td4,#td5
+{
+    color: green;
+}

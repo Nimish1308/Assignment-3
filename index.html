@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div>
+        <form>
+            <fieldset>
+                <legend>Form</legend>
+                <label>First Name:</label>
+                <input type="text" placeholder="Enter your first name" id="first">
+                <br><br>
+                <label>Last Name:</label>
+                <input type="text" placeholder="Enter your last name" id="last">
+                <br><br>
+                <label>Email:</label>
+                <input type="email" placeholder="Enter your mail" id="email">
+                <br><br>
+                <label>City: </label>
+                <select class="city" id="city">
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Ratnagiri">Ratnagiri</option>
+                    <option value="Satara">Satara</option>
+                </select>
+                <br><br>
+                <label>Gender: </label>
+                <input type="radio" name="gender" value="Male">Male
+                <input type="radio" name="gender" value="Female">Female
+                <input type="radio" name="gender" value="Others">Others
+                <br><br>
+                <input type="button" value="Submit" onclick="formSubmit()">
+                <input type="reset" value="Reset">
+            </fieldset>
+        </form>
+
+        <div class="output">
+
+            <table>
+                <tr>
+                   <th>First Name</th>
+                   <th>Last Name</th>
+                   <th>Email</th>
+                   <th>City</th>
+                   <th>Gender</th>
+                </tr>
+
+                <tr>
+                    <h1>Output:</h1>
+                    <td><span id="td1"></span></td>
+                    <td><span id="td2"></span></td>
+                    <td><span id="td3"></span></td>
+                    <td><span id="td4"></span></td>
+                    <td><span id="td5"></span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function formSubmit() {
+            var first = document.getElementById("first").value;
+            var last = document.getElementById("last").value;
+            var email = document.getElementById("email").value;
+            var city = document.getElementById("city").value;
+
+
+            var ele = document.getElementsByName('gender');
+
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked)
+                   
+                // var merge = "<br> First Name: " + first + "<br> Last Name: " + last + "<br> Email: " + email + "<br> City: " + city + "<br> Gender: " + ele[i].value;
+                // document.getElementById("result").innerHTML = merge;
+
+                var gender_select=""+ele[i].value;
+                document.getElementById("td5").innerHTML=gender_select;
+
+                var first_name=""+first;
+                document.getElementById("td1").innerHTML=first_name;
+
+                var last_name=""+last;
+                document.getElementById("td2").innerHTML=last_name;
+
+                var email_id=""+email;
+                document.getElementById("td3").innerHTML=email_id;
+
+                var city_select=""+city;
+                document.getElementById("td4").innerHTML=city_select;
+
+                // var gender_select=""+ele[i].value;                  //Not work if written bottom
+                // document.getElementById("td5").innerHTML=gender_select;
+            }
+
+
+
+        }
+
+    </script> 
+</body>
+</html>
